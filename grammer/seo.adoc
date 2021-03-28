@@ -1,0 +1,6 @@
+
+= hugo seo
+
+HUGO_ENV=production
+
+<META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
