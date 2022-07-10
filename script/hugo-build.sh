@@ -7,6 +7,8 @@ ls -lh ~/.ssh
 cat ~/.ssh/config
 cat ~/.ssh/id_rsa
 
+ssh -vT git@github.com
+
 set -e
 
 SOURCE_REPO=$1
