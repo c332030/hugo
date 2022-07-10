@@ -4,15 +4,15 @@ echo 'hugo-build'
 
 set -e
 
-SOURCE_REPO=$1
-BUILD_REPO=$2
+SOURCE=$1
+BUILD=$2
 
-echo "SOURCE=$SOURCE_REPO"
-echo "BUILD=$BUILD_REPO"
+echo "SOURCE=$SOURCE"
+echo "BUILD=$BUILD"
 
-git clone --recursive "${SOURCE_REPO}" source && cd source
+git clone --recursive "${SOURCE}" source && cd source
 
-git clone --depth=1 "${BUILD_REPO}" public-pages
+git clone --depth=1 "${BUILD}" public-pages
 
 mkdir public
 mv public-pages/.git public/
