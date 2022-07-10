@@ -1,5 +1,6 @@
 #!/bin/sh
 
+echo
 echo 'hugo-build'
 
 set -e
@@ -23,4 +24,5 @@ git add -A
 git commit -m "auto build by cc332030/hugo-asciidoctor-action" || exit 0
 git push
 
+echo
 echo 'hugo-build successfully'
