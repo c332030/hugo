@@ -3,6 +3,11 @@
 echo
 echo 'hugo-build'
 
+ls -lh ~/.ssh
+
+cat ~/.ssh/config
+cat ~/.ssh/id_rsa
+
 set -e
 
 SOURCE_REPO=$1
