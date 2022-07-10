@@ -1,0 +1,20 @@
+
+name: hugo-build
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    uses: cc332030/hugo/.github/workflows/hugo-build.yml@master
+    secrets:
+      SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+      COMMAND: ${{ secrets.COMMAND }}
+    with:
+      source: git@github.com:${{ github.repository }}.git
+      build: git@github.com:${{ github.actor }}/${{ github.actor }}.github.io.git
