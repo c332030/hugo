@@ -2,6 +2,9 @@
 
 echo 'hugo-build'
 
+echo "dirname ~ $(dirname ~)"
+echo "basename ~ $(basename ~)"
+
 ls -lh ~/.ssh
 
 cat ~/.ssh/config
