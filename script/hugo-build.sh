@@ -8,6 +8,7 @@ set -e
 SOURCE_REPO=$1
 BUILD_REPO=$2
 
+echo
 echo "SOURCE=$SOURCE_REPO"
 echo "BUILD=$BUILD_REPO"
 
