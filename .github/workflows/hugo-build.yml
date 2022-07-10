@@ -13,6 +13,8 @@ on:
     secrets:
       SSH_PRIVATE_KEY:
         required: true
+      COMMAND:
+        required: true
 
 jobs:
   build:
