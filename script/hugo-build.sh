@@ -2,20 +2,6 @@
 
 echo 'hugo-build'
 
-echo "dirname ~ $(dirname ~)"
-echo "basename ~ $(basename ~)"
-
-echo "~/.ssh"
-ls -lh ~/.ssh
-
-echo "ls /root/.ssh"
-ls -lh /root/.ssh
-
-cat ~/.ssh/config
-cat ~/.ssh/id_rsa
-
-ssh -vT git@github.com
-
 set -e
 
 SOURCE_REPO=$1
