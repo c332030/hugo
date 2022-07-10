@@ -1,6 +1,16 @@
 
 = hugo
 
+== 安装
+[source,shell]
+----
+choco install hugo -confirm
+choco update hugo -confirm
+
+choco install hugo-extended -confirm
+
+----
+
 == 新建
 [source,shell script]
 ----
