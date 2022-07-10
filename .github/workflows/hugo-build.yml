@@ -1,0 +1,30 @@
+
+name: hugo-build
+
+on:
+  workflow_call:
+    inputs:
+      source:
+        required: true
+        type: string
+      build:
+        required: true
+        type: string
+    secrets:
+      SSH_PRIVATE_KEY:
+        required: true
+
+jobs:
+  build:
+    name: hugo build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: cc332030/hugo-asciidoctor-action@master
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          USER: ${{ github.actor }}
+          EMAIL: ${{ github.actor }}@gmail.com
+          COMMAND: ${{ secrets.COMMAND }}
+        with:
+          source: ${{ inputs.source }}
+          build: ${{ inputs.build }}
