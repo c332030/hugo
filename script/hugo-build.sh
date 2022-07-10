@@ -1,6 +1,5 @@
 #!/bin/sh
 
-echo
 echo 'hugo-build'
 
 ls -lh ~/.ssh
@@ -13,7 +12,6 @@ set -e
 SOURCE_REPO=$1
 BUILD_REPO=$2
 
-echo
 echo "SOURCE=$SOURCE_REPO"
 echo "BUILD=$BUILD_REPO"
 
@@ -30,5 +28,4 @@ git add -A
 git commit -m "auto build by cc332030/hugo-asciidoctor-action" || exit 0
 git push
 
-echo
 echo 'hugo-build successfully'
